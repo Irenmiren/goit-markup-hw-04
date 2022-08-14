@@ -7,8 +7,10 @@
 	--contact-footer-color: #ffffff;
 	--button-bg-color: #f5f4fa;
 	--hero-bg: #2f303a;
+	--hero-bg-second: #c4c4c4;
 	--portfolio-bg: #e5e5e5;
 	--button-hero-hover: #188ce8;
+	--icon: #afb1b8;
 }
 
 body {
@@ -169,6 +171,23 @@ img {
 	color: var(--accent-color);
 }
 
+.contact-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.icon-smartphone {
+	display: inline-block;
+	fill: currentColor;
+	margin-right: 10px;
+}
+
+.icon-envelope {
+	display: inline-block;
+	fill: currentColor;
+	margin-right: 10px;
+}
+
 .header {
 	border-bottom: 1px solid #ececec;
 }
@@ -186,10 +205,17 @@ img {
 
 /* секция  герой */
 .hero {
-	background-color: var(--hero-bg);
+	background-color: var(--hero-bg-second);
 	text-align: center;
 	padding-top: 200px;
 	padding-bottom: 200px;
+	max-width: 1600px;
+	height: 600px;
+	margin: 0 auto;
+	background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg-hero.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .hero-title {
@@ -253,6 +279,17 @@ img {
 	padding-bottom: 0;
 }
 
+.benefits-icon {
+	width: 270px;
+	height: 120px;
+	background-color: var(--button-bg-color);
+	border-radius: 4px;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 /* секция чем мы занимаемся  */
 
 .background {
@@ -299,6 +336,7 @@ img {
 	line-height: 1.19;
 	text-align: center;
 	letter-spacing: 0.03em;
+	margin-bottom: 16px;
 }
 
 .card-team {
@@ -323,6 +361,61 @@ img {
 
 .card-team-title {
 	padding: 30px 0px;
+}
+
+.team-soc {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	padding: 0px 32px;
+}
+
+.team-soc-link {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	fill: var(--icon);
+}
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+	background-color: var(--accent-color);
+	fill: var(--hero-color);
+}
+
+/* секция постоянные клиенты */
+
+.customers-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+.customers-link {
+	width: 170px;
+	height: 92px;
+	max-width: 170px;
+	border: 1px solid var(--icon);
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	fill: var(--icon);
+}
+
+.customer-logo {
+	display: inline-block;
+	/* fill: var(--icon); */
+}
+
+.customers-link:hover,
+.customers-link:focus {
+	border: 1px solid #2196f3;
+	fill: #2196f3;
 }
 
 /* секция портфолио */
@@ -361,6 +454,11 @@ img {
 	margin-left: 8px;
 }
 
+.filtr-btn .button:hover,
+.filtr-btn .button:hover {
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
 .card-title {
 	max-width: 370px;
 	background: #ffffff;
@@ -372,6 +470,11 @@ img {
 
 .card-project {
 	max-width: 370px;
+}
+
+.card-project:hover,
+.card-project:focus {
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .cards-project {
@@ -440,6 +543,15 @@ img {
 	padding-bottom: 60px;
 }
 
+.footer-wrap {
+	display: flex;
+	align-items: baseline;
+}
+
+.contacts-footer {
+	margin-right: 70px;
+}
+
 .address {
 	color: var(--contact-footer-color);
 	font-family: inherit;
@@ -457,4 +569,45 @@ img {
 }
 .contacts-nav.bottom .item:not(:last-child) {
 	margin-bottom: 9px;
+}
+
+.soc-link-title {
+	font-family: "Roboto";
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: #ffffff;
+	margin-bottom: 20px;
+	padding-top: 14px;
+}
+
+.soc-link-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+.soc-link {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255, 255, 255, 0.1);
+
+	fill: var(--contact-footer-color);
+}
+
+.soc-link:hover,
+.soc-link:focus {
+	background-color: var(--accent-color);
+	fill: var(--hero-color);
+}
+
+.soc-icon {
+	display: inline-block;
 }
